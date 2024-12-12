@@ -83,6 +83,7 @@
         <form id="registration-form" action="africa1.html" method="GET">
             <select required name="country" id="formCountry" class="form-select mb-2">
                 <option value="">---Choisir le pays---</option>
+                <option value="GUINEA">Benin (FCFA)</option>
                 <option value="GUINEA">Guinée Conakry (FG)</option>
                 <option value="SENEGAL">Sénégal (FCFA)</option>
                 <option value="TOGO">Togo (FCFA)</option>
@@ -122,6 +123,10 @@
 
     <script>
         const networks = {
+            BENIN: [
+                { value: "ORANGEMONEY", text: "Orange Money" },
+                { value: "MTN", text: "MTN MoMo" }
+            ],
             GUINEA: [
                 { value: "ORANGEMONEY", text: "Orange Money" },
                 { value: "MTN", text: "MTN MoMo" }
@@ -176,7 +181,9 @@
 
         const amounts = {
             GUINEA: [
-                { value: "30 000", text: "30 000 FG", receive: "225 000 FG" },
+                { value: "30 000", text: "30 000 FG", receive: "300 000 FG" },
+                { value: "40 000", text: "40 000 FG", receive: "400 000 FG" },
+                { value: "50 000", text: "50 000 FG", receive: "500 000 FG" },
                 { value: "1000000", text: "1 000 000 FG", receive: "5 100 000 FG" },
                 { value: "2000000", text: "2 000 000 FG", receive: "9 300 000 FG" },
                 { value: "3000000", text: "3 000 000 FG", receive: "13 500 000 FG" },
@@ -186,7 +193,9 @@
                 { value: "20000000", text: "20 000 000 FG", receive: "85 200 000 FG" }
             ],
             CFA: [
-                { value: "30000", text: "30 000 F CFA", receive: "225 000 F CFA" },
+                { value: "30 000", text: "30 000 FG", receive: "300 000 FG" },
+                { value: "40 000", text: "40 000 FG", receive: "400 000 FG" },
+                { value: "50 000", text: "50 000 FG", receive: "500 000 FG" },
                 { value: "100000", text: "100 000 F CFA", receive: "650 000 F CFA" },
                 { value: "200000", text: "200 000 F CFA", receive: "1 300 000 F CFA" },
                 { value: "300000", text: "300 000 F CFA", receive: "2 000 000 F CFA" },
@@ -205,6 +214,7 @@
         };
 
         const transactionIndicatives = {
+            BENIN: "+229",
             GUINEA: "+224",
             SENEGAL: "+221",
             TOGO: "+228",
